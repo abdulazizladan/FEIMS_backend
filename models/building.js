@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
 const { Schema } = require('mongoose');
 
+var Corridor = new Schema({
+  type: {
+    quantity: {type: Number, required: true},
+    type: {type: String},
+    condition: {type: String, required: true},
+    cost_of_repair: {type: Number, required: true}
+  }
+})
+
 const BuildingSchema = new Schema({
   structure: {
     type: {
@@ -143,14 +152,7 @@ const BuildingSchema = new Schema({
             }
           },
 
-          corridors: {
-            type: {
-              quantity: {type: Number, required: true},
-              type: {type: String, required: true},
-              condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
-            }
-          },
+          corridors: [Corridor],
         
           interior_wall: {
             type: {

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = require('mongoose');
 
+
 const SiteSchema = new Schema({
     name : {type: String, required: true},
     code : {type: String, required: true},
