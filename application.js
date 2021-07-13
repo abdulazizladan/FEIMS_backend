@@ -12,7 +12,7 @@ application.use(cors());
 routes.intialize(application);
 
 application.get('/', (req, res) => {
-    res.status(200).json('sever is up and running');
+    res.status(200).json('server is up and running');
 });
 
 module.exports = { application };
