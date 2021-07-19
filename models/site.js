@@ -175,5 +175,5 @@ const SiteSchema = new Schema({
     }
 });
 
-const Site = mongoose.model('Site', SiteSchema);
-module.exports = Site;
+const SiteModel = mongoose.model('Site', SiteSchema);
+module.exports = SiteModel;

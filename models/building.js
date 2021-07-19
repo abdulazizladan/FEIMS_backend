@@ -422,5 +422,5 @@ const BuildingSchema = new Schema({
 }, {strict: true});
 
 
-const Building = mongoose.model('Building', BuildingSchema);
-module.exports = Building;
+const BuildingModel = mongoose.model('Building', BuildingSchema);
+module.exports = BuildingModel;
