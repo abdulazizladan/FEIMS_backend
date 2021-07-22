@@ -45,11 +45,6 @@ const BuildingSchema = new Schema({
               concrete_work: {type: Number, required: true}, 
               form_work: {type: Number, required: true}, 
               reinforcement: {type: Number, required: true},
-            }
-          },
-
-          under_block: {
-            type: {
               brick_work: {type: Number, required: true}
             }
           },
