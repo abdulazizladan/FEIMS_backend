@@ -25,7 +25,6 @@ const BuildingSchema = new Schema({
       },
 
       purpose: {type: String, required: true}, 
-      comment: {type: String, required: true},
 
       dimensions: {
         type: {

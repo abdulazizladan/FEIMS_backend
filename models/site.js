@@ -100,7 +100,9 @@ const SiteSchema = new Schema({
 		type: {
 			piping_and_accessories: {type: Number, required: true},
 			cabling: {type: Number, required: true},
-			sources: {type: String, required: true}, 
+			sources: [{
+				type: String, required: true
+			}], 
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
 			cost_of_repair: {type: Number, required: true}
@@ -111,7 +113,9 @@ const SiteSchema = new Schema({
 		type: {
 			piping_and_accessories: {type: Number, required: true},
 			cabling: {type: Number, required: true},
-			sources: {type: String, required: true}, 
+			sources: [{
+				type: String, required: true
+			}], 
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
 			cost_of_repair: {type: Number, required: true}
