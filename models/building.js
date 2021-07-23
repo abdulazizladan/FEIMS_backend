@@ -36,7 +36,7 @@ const BuildingSchema = new Schema({
         }
       },
     
-      superstructure: {
+      super_structure: {
         type: {
           type: {type: String, required: true},
 
