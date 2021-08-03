@@ -36,10 +36,10 @@ const BuildingSchema = new Schema({
       }      
     },
     required: true
-  },
+  }, 
   super_structure: {
     type: {
-      type: {type: String, required: true},
+      structure_type: {type: String, required: true},
 
       under_concrete: {
         type: {
@@ -69,7 +69,7 @@ const BuildingSchema = new Schema({
       },
       condition: {type: String, required: true},
       cost_of_repair: {type: Number, required: true}
-    }
+    }, required: true
   },
   walls: {
     type: {
@@ -172,73 +172,74 @@ const BuildingSchema = new Schema({
           cost_of_repair: {type: Number, required: true}
         }
       },
-    }
+    }, required: true
   },
   floor: {
-    joints_and_beams: {
-      type: {
-        concrete_work: {type: Number, required: true}, 
-        finishes: {type: Number, required: true}, 
-        form_work: {type: Number, required: true}, 
-        quantity: {type: Number, required: true}, 
-        damage: {type: Number, required: true}, 
-        cost_of_repair: {type: Number, required: true}
-      }
-    },
+    type: {
+      joints_and_beams: {
+        type: {
+          concrete_work: {type: Number, required: true}, 
+          finishes: {type: Number, required: true}, 
+          form_work: {type: Number, required: true}, 
+          quantity: {type: Number, required: true}, 
+          damage: {type: Number, required: true}, 
+          cost_of_repair: {type: Number, required: true}
+        }
+      },
 
-    slabs: {
-      type: {
-        concrete_work: {type: Number, required: true}, 
-        finishes: {type: Number, required: true}, 
-        form_work: {type: Number, required: true}, 
-        quantity: {type: Number, required: true}, 
-        reinforcement: {type: Number, required: true}, 
-        damage: {type: Number, required: true}, 
-        cost_of_repair: {type: Number, required: true}
-      }
-    },
+      slabs: {
+        type: {
+          concrete_work: {type: Number, required: true}, 
+          finishes: {type: Number, required: true}, 
+          form_work: {type: Number, required: true}, 
+          quantity: {type: Number, required: true}, 
+          reinforcement: {type: Number, required: true}, 
+          damage: {type: Number, required: true}, 
+          cost_of_repair: {type: Number, required: true}
+        }
+      },
 
-    foundation: {
-      type: {
-        type: {type: String, required: true},
-        depth: {type: Number, required: true}, 
-        filling: {type: Number, required: true}, 
-        excavation: {type: Number, required: true}, 
-        concrete_work: {type: Number, required: true}, 
-        block_work: {type: Number, required: true}, 
-        form_work: {type: Number, required: true}, 
-        reinforcement: {type: Number, required: true}, 
-        rendering: {type: Number, required: true}, 
-        dpm: {type: Number, required: true}, 
-        damage: {type: Number, required: true}, 
-        cost_of_repair: {type: Number, required: true}
-      }
-    },
-    
-    floor_structure: {
-      type: {
-        material: {type: String, required: true}, 
-        size: {type: Number, required: true}, 
-        type: {type: String, required: true},
-        accessories: {type: String, required: true},
-        qauntity: {type: Number, required: true},
-        condition: {type: String, required: true}, 
-        cost_of_repair: {type: Number, required: true}
-      }
-    },
+      foundation: {
+        type: {
+          type: {type: String, required: true},
+          depth: {type: Number, required: true}, 
+          filling: {type: Number, required: true}, 
+          excavation: {type: Number, required: true}, 
+          concrete_work: {type: Number, required: true}, 
+          block_work: {type: Number, required: true}, 
+          form_work: {type: Number, required: true}, 
+          reinforcement: {type: Number, required: true}, 
+          rendering: {type: Number, required: true}, 
+          dpm: {type: Number, required: true}, 
+          damage: {type: Number, required: true}, 
+          cost_of_repair: {type: Number, required: true}
+        }
+      },
+      
+      floor_structure: {
+        type: {
+          material: {type: String, required: true}, 
+          size: {type: Number, required: true}, 
+          type: {type: String, required: true},
+          accessories: {type: String, required: true},
+          qauntity: {type: Number, required: true},
+          condition: {type: String, required: true}, 
+          cost_of_repair: {type: Number, required: true}
+        }
+      },
 
-    floor_covering: {
-      type: {
-        material: {type: String, required: true}, 
-        size: {type: Number, required: true}, 
-        type: {type: String, required: true},
-        accessories: {type: String, required: true},
-        qauntity: {type: Number, required: true},
-        condition: {type: String, required: true}, 
-        cost_of_repair: {type: Number, required: true}
+      floor_covering: {
+        type: {
+          material: {type: String, required: true}, 
+          size: {type: Number, required: true}, 
+          type: {type: String, required: true},
+          accessories: {type: String, required: true},
+          qauntity: {type: Number, required: true},
+          condition: {type: String, required: true}, 
+          cost_of_repair: {type: Number, required: true}
+        }
       }
-    },
-    
+    }, required: true
   },
   roof: {
     type: {
