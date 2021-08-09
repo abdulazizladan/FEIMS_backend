@@ -16,12 +16,6 @@ const HVEquipmentSchema = new Schema({
         longitude: Number,
         latitude: Number
     },
-    specifications: [
-        {
-            parameter: String,
-            value: Number
-        }
-    ],
     hasCircuitDiagram: {type: Boolean, required: true},
     condition: {type: String, required: true},
     comment: {type: String, required: true},
