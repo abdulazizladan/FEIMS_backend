@@ -1,9 +1,9 @@
-const LVEquipmentModel = require('../models/low-value-equipment');
+const HVEquipmentModel = require('../models/highValueEquipment');
 
-class LVEquipmentDao {
+class HVEquipmnetDao {
     addNew(obj) {
         return new Promise((resolve, reject) => {
-            let newEquipment = new LVEquipmentModel(obj);
+            let newEquipment = new HVEquipmentModel(obj);
             newEquipment.save((err, savedEquipment) => {
                 if (err) {
                     reject(err);
@@ -15,7 +15,7 @@ class LVEquipmentDao {
 
     getOne(id) {
         return new Promise((resolve, reject) => {
-            LVEquipmentModel.findById(id, (err, singleEquipment) => {
+            HVEquipmentModel.findById(id, (err, singleEquipment) => {
                 if (err) {
                     reject(err);
                 }
@@ -26,7 +26,7 @@ class LVEquipmentDao {
 
     getAll() {
         return new Promise((resolve, reject) => {
-            LVEquipmentModel.find((err, equipmentsArray) => {
+            HVEquipmentModel.find((err, equipmentsArray) => {
                 if (err) {
                     reject(err);
                 }
@@ -37,7 +37,7 @@ class LVEquipmentDao {
 
     update(id, obj) {
         return new Promise((resolve, reject) => {
-            LVEquipmentModel.findByIdAndUpdate(id, obj, (err, result) => {
+            HVEquipmentModel.findByIdAndUpdate(id, obj, (err, result) => {
                 if (err) {
                     reject(err);
                 }
@@ -48,7 +48,7 @@ class LVEquipmentDao {
 
     delete(id) {
         return new Promise((resolve, reject) => {
-            LVEquipmentModel.findByIdAndRemove(id, (err, result) => {
+            HVEquipmentModel.findByIdAndRemove(id, (err, result) => {
                 if (err) {
                     reject(err);
                 }
@@ -58,4 +58,4 @@ class LVEquipmentDao {
     }
 }
 
-module.exports = new LVEquipmentDao();
+module.exports = new HVEquipmnetDao();

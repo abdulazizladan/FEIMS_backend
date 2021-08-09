@@ -8,7 +8,7 @@ const SiteSchema = new Schema({
     state: {type: String, required: true},
     lga: {type: String, required: true},
 
-    street_address: {type: String, required: true},
+    streetAddress: {type: String, required: true},
     measurement: {type: Number, required: true},
     level: {type: Number, required: true},
 
@@ -27,23 +27,23 @@ const SiteSchema = new Schema({
 			thickness: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true},
+			costOfRepair: {type: Number, required: true},
 		}
     },
     fence: {
 		type: {
 			description: {type: String, required: true},
-			fence_height: {type: Number, required: true},
+			fenceHeight: {type: Number, required: true},
 			perimeter: {type: Number, required: true},
-			concrete_work: {type: Number, required: true},
-			block_work: {type: Number, required: true},
-			form_work: {type: Number, required: true},
+			concreteWork: {type: Number, required: true},
+			blockWork: {type: Number, required: true},
+			formWork: {type: Number, required: true},
 			reinforcement: {type: Number, required: true},
 			rendering: {type: Number, required: true},
-			barb_wire: {type: Number, required: true},
+			barbWire: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true},
+			costOfRepair: {type: Number, required: true},
 		}
     },
 
@@ -52,10 +52,10 @@ const SiteSchema = new Schema({
 			description: {type: String, required: true},
 			width: {type: Number, required: true},
 			length: {type: Number, required: true},
-			surface_dressing: {type: Number, required: true},
+			surfaceDressing: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },    
     
@@ -63,10 +63,10 @@ const SiteSchema = new Schema({
 		type: {
 			width: {type: Number, required: true},
 			length: {type: Number, required: true},
-			surface_dressing: {type: Number, required: true},
+			surfaceDressing: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true},
+			costOfRepair: {type: Number, required: true},
 		}
     },    
     
@@ -74,10 +74,10 @@ const SiteSchema = new Schema({
 		type: {
 			width: {type: Number, required: true},
 			length: {type: Number, required: true},
-			surface_dressing: {type: Number, required: true},
+			surfaceDressing: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true},
+			costOfRepair: {type: Number, required: true},
 		}
     },    
     
@@ -85,85 +85,85 @@ const SiteSchema = new Schema({
 		type: {
 			depth: {type: Number, required: true},
 			length: {type: Number, required: true},
-			concrete_work: {type: Number, required: true},
-			block_work: {type: Number, required: true},
-			form_work: {type: Number, required: true},
+			concreteWork: {type: Number, required: true},
+			blockWork: {type: Number, required: true},
+			formWork: {type: Number, required: true},
 			reinforcement: {type: Number, required: true},
 			rendering: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },    
     
     electricity: {
 		type: {
-			piping_and_accessories: {type: Number, required: true},
+			pipingAndAccessories: {type: Number, required: true},
 			cabling: {type: Number, required: true},
 			sources: [{
 				type: String, required: true
 			}], 
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },    
     
     water: {
 		type: {
-			piping_and_accessories: {type: Number, required: true},
+			pipingAndAccessories: {type: Number, required: true},
 			cabling: {type: Number, required: true},
 			sources: [{
 				type: String, required: true
 			}], 
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },
     
     steps: {
 		type: {
-			concrete_work: {type: Number, required: true},
+			concreteWork: {type: Number, required: true},
 			width: {type: Number, required: true},
 			length: {type: Number, required: true},
 			quantity: {type: Number, required: true},
-			surface_dressing: {type: Number, required: true},
+			surfaceDressing: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },
     
-    gas_tanks: {
+    gasTanks: {
 		type: {
 			quantity: {type: Number, required: true},
 			condition: {type: String, required: true},
 			damage: {type: Number, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },
     
     ramps: {
 		type: {
 			width: {type: Number, required: true},
-			sloping_length: {type: Number, required: true},
-			concrete_work: {type: Number, required: true},
+			slopingLength: {type: Number, required: true},
+			concreteWork: {type: Number, required: true},
 			condition: {type: String, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },
     
-    street_lights: {
+    streetLights: {
 		type: {
 			quantity: {type: Number, required: true},
 			height: {type: Number, required: true},
 			condition: {type: String, required: true},
-			cost_of_repair: {type: Number, required: true}
+			costOfRepair: {type: Number, required: true}
 		}
     },
     
-    waste_site: {
+    wasteSite: {
 		type: {
 			length: {type: Number, required: true},
 			width: {type: Number, required: true},

@@ -6,7 +6,7 @@ var Corridor = new Schema({
     quantity: {type: Number, required: true},
     type: {type: String},
     condition: {type: String, required: true},
-    cost_of_repair: {type: Number, required: true}
+    costOfRepair: {type: Number, required: true}
   }
 })
 
@@ -15,7 +15,7 @@ const BuildingSchema = new Schema({
     type: {
       name: {type: String, required: true}, 
       code: {type: String}, 
-      year_built: {type: Number, required: true},
+      yearBuilt: {type: Number, required: true},
 
       position: { 
         type: {
@@ -28,27 +28,27 @@ const BuildingSchema = new Schema({
 
       dimensions: {
         type: {
-          floor_area: {type: Number, required: true}, 
-          wall_area: {type: Number, required: true}, 
+          floorArea: {type: Number, required: true}, 
+          wallArea: {type: Number, required: true}, 
           ceiling_area: {type: Number, required: true}, 
           floors: {type: Number, required: true},
         }
       },
     
-      super_structure: {
+      superStructure: {
         type: {
           type: {type: String, required: true},
 
           under_concrete: {
             type: {
               concrete_work: {type: Number, required: true}, 
-              form_work: {type: Number, required: true}, 
+              formWork: {type: Number, required: true}, 
               reinforcement: {type: Number, required: true},
-              brick_work: {type: Number, required: true}
+              brickWork: {type: Number, required: true}
             }
           },
 
-          under_crack_tiles: {
+          underCrackTiles: {
             type: {
               size: {type: Number, required: true}, 
               type: {type: String, required: true},
@@ -56,7 +56,7 @@ const BuildingSchema = new Schema({
             }
           },
 
-          under_alucobond: {
+          underAlucobond: {
             type: {
               size: {type: Number, required: true}, 
               type: {type: String, required: true},
@@ -66,22 +66,22 @@ const BuildingSchema = new Schema({
             required: true
           },
           condition: {type: String, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
       
       walls: {
         type: {
-          wall_type: {type: String, required: true}, 
+          wallType: {type: String, required: true}, 
           quantity: {type: Number, required: true}, 
-          last_decorated: {type: Number, required: true}, 
-          has_stain: {type: Boolean, required: true},
+          lastDecorated: {type: Number, required: true}, 
+          hasStain: {type: Boolean, required: true},
 
-          concrete_wall: {
+          concreteWall: {
             type: {
               condition: {type: String, required: true}, 
               quantity: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true},
+              costOfRepair: {type: Number, required: true},
             },
             required: true
           },
@@ -90,7 +90,7 @@ const BuildingSchema = new Schema({
             type: {
               condition: {type: String, required: true}, 
               quantity: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             },
             required: true
           },
@@ -99,7 +99,7 @@ const BuildingSchema = new Schema({
             type: {
               condition: {type: String, required: true},
               quantity: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
@@ -109,7 +109,7 @@ const BuildingSchema = new Schema({
               quantity: {type: Number, required: true}, 
               damage: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
@@ -118,7 +118,7 @@ const BuildingSchema = new Schema({
               quantity: {type: Number, required: true}, 
               finishes: {type: String, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
@@ -126,29 +126,29 @@ const BuildingSchema = new Schema({
             type: {
               concrete_work: {type: Number, required: true}, 
               finishes: {type: Number, required: true}, 
-              form_work: {type: Number, required: true}, 
+              formWork: {type: Number, required: true}, 
               quantity: {type: Number, required: true},
               reinforceemnt: {type: Number, required: true}, 
               damage: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
           facade: {
             type: {
-              concrete_work: {type: Number, required: true}, 
+              concreteWork: {type: Number, required: true}, 
               finishes: {type: Number, required: true}, 
-              form_work: {type: Number, required: true}, 
+              formWork: {type: Number, required: true}, 
               type: {type: String, required: true},
               quantity: {type: Number, required: true}, 
               damage: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
           corridors: [Corridor],
         
-          interior_wall: {
+          interiorWall: {
             type: {
               finishing: {type: String, required: true}, 
               size: {type: Number, required: true}, 
@@ -156,7 +156,7 @@ const BuildingSchema = new Schema({
               accessories: {type: String, required: true},
               quantity: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
         
@@ -168,33 +168,33 @@ const BuildingSchema = new Schema({
               type: {type: String, required: true},
               quantity: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
         }
       },
     
       floor: {
-        joints_and_beams: {
+        jointsAndBeams: {
           type: {
-            concrete_work: {type: Number, required: true}, 
+            concreteWork: {type: Number, required: true}, 
             finishes: {type: Number, required: true}, 
-            form_work: {type: Number, required: true}, 
+            formWork: {type: Number, required: true}, 
             quantity: {type: Number, required: true}, 
             damage: {type: Number, required: true}, 
-            cost_of_repair: {type: Number, required: true}
+            costOfRepair: {type: Number, required: true}
           }
         },
 
         slabs: {
           type: {
-            concrete_work: {type: Number, required: true}, 
+            concreteWork: {type: Number, required: true}, 
             finishes: {type: Number, required: true}, 
-            form_work: {type: Number, required: true}, 
+            formWork: {type: Number, required: true}, 
             quantity: {type: Number, required: true}, 
             reinforcement: {type: Number, required: true}, 
             damage: {type: Number, required: true}, 
-            cost_of_repair: {type: Number, required: true}
+            costOfRepair: {type: Number, required: true}
           }
         },
 
@@ -205,17 +205,17 @@ const BuildingSchema = new Schema({
             filling: {type: Number, required: true}, 
             excavation: {type: Number, required: true}, 
             concrete_work: {type: Number, required: true}, 
-            block_work: {type: Number, required: true}, 
-            form_work: {type: Number, required: true}, 
+            blockWork: {type: Number, required: true}, 
+            formWork: {type: Number, required: true}, 
             reinforcement: {type: Number, required: true}, 
             rendering: {type: Number, required: true}, 
             dpm: {type: Number, required: true}, 
             damage: {type: Number, required: true}, 
-            cost_of_repair: {type: Number, required: true}
+            costOfRepair: {type: Number, required: true}
           }
         },
         
-        floor_structure: {
+        floorStructure: {
           type: {
             material: {type: String, required: true}, 
             size: {type: Number, required: true}, 
@@ -223,11 +223,11 @@ const BuildingSchema = new Schema({
             accessories: {type: String, required: true},
             qauntity: {type: Number, required: true},
             condition: {type: String, required: true}, 
-            cost_of_repair: {type: Number, required: true}
+            costOfRepair: {type: Number, required: true}
           }
         },
 
-        floor_covering: {
+        floorCovering: {
           type: {
             material: {type: String, required: true}, 
             size: {type: Number, required: true}, 
@@ -235,7 +235,7 @@ const BuildingSchema = new Schema({
             accessories: {type: String, required: true},
             qauntity: {type: Number, required: true},
             condition: {type: String, required: true}, 
-            cost_of_repair: {type: Number, required: true}
+            costOfRepair: {type: Number, required: true}
           }
         },
         
@@ -247,7 +247,7 @@ const BuildingSchema = new Schema({
           size: {type: Number, required: true}, 
           damage: {type: Number, required: true}, 
           condition: {type: String, required: true}, 
-          cost_of_repair: {type: Number, required: true},
+          costOfRepair: {type: Number, required: true},
 
           support: {
             type: {
@@ -256,18 +256,18 @@ const BuildingSchema = new Schema({
               quantity: {type: Number, required: true},
               damage: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
-          steel_truss: {
+          steelTruss: {
             type: {
               type: {type: String, required: true}, 
               size: {type: Number, required: true}, 
               quantity: {type: Number, required: true},
               damage: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true},
+              costOfRepair: {type: Number, required: true},
             }
           },
 
@@ -278,7 +278,7 @@ const BuildingSchema = new Schema({
               quantity: {type: Number, required: true},
               damage: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
 
@@ -289,7 +289,7 @@ const BuildingSchema = new Schema({
               quantity: {type: Number, required: true},
               damage: {type: Number, required: true}, 
               condition: {type: String, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
           
@@ -299,7 +299,7 @@ const BuildingSchema = new Schema({
               size: {type: Number, required: true}, 
               quantity: {type: Number, required: true}, 
               damage: {type: Number, required: true}, 
-              cost_of_repair: {type: Number, required: true}
+              costOfRepair: {type: Number, required: true}
             }
           },
         }
@@ -311,7 +311,7 @@ const BuildingSchema = new Schema({
             type: {
               passenger: {type: Number, required: true},
               freight: {type: Number, required: true},
-              fire_service: {type: Number, required: true},
+              fireService: {type: Number, required: true},
               independent: {type: Number, required: true}
             }
           },
@@ -321,21 +321,21 @@ const BuildingSchema = new Schema({
             hydraulic: {type: Number, required: true}
           },
 
-          electric_eye: {type: Boolean, required: true},
-          heat_sensor: {type: Boolean, required: true},
-          key_location: {type: String, required: true},
-          brand_name: {type: String, required: true},
-          service_company: {type: String, required: true},
+          electricEye: {type: Boolean, required: true},
+          heatSensor: {type: Boolean, required: true},
+          keyLocation: {type: String, required: true},
+          brandName: {type: String, required: true},
+          serviceCompany: {type: String, required: true},
           phone: {type: String, required: true},
-          emergency_shotoff_location: {type: String, required: true},
+          emergencyShotoffLocation: {type: String, required: true},
 
           elevator_exits: {
             type: {
               top: {type: Number, required: true},
               side: {type: Number, required: true},
-              dumb_waiter: {type: Number, required: true},
-              laundry_chute: {type: Number, required: true},
-              trash_chute: {type: Number, required: true},
+              dumbWaiter: {type: Number, required: true},
+              laundryChute: {type: Number, required: true},
+              trashChute: {type: Number, required: true},
               other: {type: Number, required: true}
             }
           },
@@ -347,67 +347,67 @@ const BuildingSchema = new Schema({
 
   services: {
     type: {
-      roof_lights: {
+      roofLights: {
         type: {
           size: {type: Number, required: true}, 
           thickness: {type: Number, required: true},
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
           damage: {type: Number, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
 
-      air_conditioning: {
+      airConditioning: {
         type: {
-          piping_length: {type: Number, required: true},
+          pipingLength: {type: Number, required: true},
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
           damage: {type: Number, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
 
-      roof_covering: {
+      roofCovering: {
         type: {
           height: {type: Number, required: true},
-          sloping_length: {type: Number, required: true},
+          slopingLength: {type: Number, required: true},
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
           damage: {type: Number, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
 
-      burglar_proof: {
+      burglarProof: {
         type: {
           type: {type: String, required: true},
           quantity: {type: Number, required: true},
           location: {type: String, required: true},
           condition: {type: String, required: true},
           damage: {type: Number, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
       gates: {
         type: {
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
       drainage: {
         type: {
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       },
       distribution: {
         type: {
           quantity: {type: Number, required: true},
           condition: {type: String, required: true},
-          cost_of_repair: {type: Number, required: true}
+          costOfRepair: {type: Number, required: true}
         }
       }
     },
