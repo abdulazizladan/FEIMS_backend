@@ -7,8 +7,8 @@ function intialize(application) {
   console.log("intilizing routes");
   application.use("/sites", sites());
   application.use('/buildings', buildings());
-  application.use('/equipments/low-value', LVEquipments());
-  application.use('/equipments/high-value', HVEquipments());
+  application.use('/equipment/low-value', LVEquipments());
+  application.use('/equipment/high-value', HVEquipments());
 }
 
 module.exports = { intialize };
