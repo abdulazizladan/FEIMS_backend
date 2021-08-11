@@ -1,5 +1,5 @@
 const http = require('http');
-const mongoose = require('./db/mongoose');
+const mongoose = require('./src/db/mongoose');
 const { application } = require('./application');
 
 const port = process.env.PORT || 3000;
