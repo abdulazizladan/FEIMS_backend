@@ -10,8 +10,7 @@ const LVEquipmentSchema = new Schema({
     brand: {type: String, required: true},
     model: {type: String},
     status: {type: String, required: true},
-    costOfRepair: {type: Number, required: true},
-    comment: {type: String, required: true}
+    costOfRepair: {type: Number, required: true}
 });
 
 const LVEquipmentModel = mongoose.model('lv-equipment', LVEquipmentSchema);
