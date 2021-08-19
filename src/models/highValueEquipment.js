@@ -6,7 +6,6 @@ const HVEquipmentSchema = new Schema({
     code: {type: String, required: true},
     serialNumber: {type: String, required: true},
     hasManual: {type: Boolean, required: true},
-    purchaseDate: {type: Date, required: true},
     manufacturer: {type: String, required: true},
     commissionDate: {type: Date, required: true},
     model: {type: String},
@@ -18,7 +17,6 @@ const HVEquipmentSchema = new Schema({
     },
     hasCircuitDiagram: {type: Boolean, required: true},
     condition: {type: String, required: true},
-    comment: {type: String, required: true},
     damage: {type: Number, required: true},
     costOfRepair: {type: Number, required: true},
     components: [
