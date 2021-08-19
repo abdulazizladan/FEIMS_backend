@@ -34,7 +34,7 @@ class UserDao {
                 if (err) {
                     reject(err);
                 }
-                resolve(singleUser.toObject());
+                resolve(singleUser?.toObject());
             });
         });
     }

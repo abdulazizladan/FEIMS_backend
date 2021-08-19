@@ -10,17 +10,18 @@ module.exports = () => {
     api.post('/login', async (req, res) => {
         const { username, password } = req.body;
         try {
-            let {secret, ...user} = await UserDao.getOneByUsername(username);
-            let flag = await validatePassword(password, secret);
-            if (flag) {
+            const user = await UserDao.getOneByUsername(username);
+            if (user && await validatePassword(password, user.secret)) {
                 let token = await generateToken(user._id, username);
-                const payload = { user: user, token: token };
+                let {secret, ...data} = user;
+
+                const payload = { user: data, token: token };
                 res.status(200).json({payload});
             } else {
                 res.status(400).json('invalid credentials');
             }
         } catch (err) {
-            res.status(500).json(err);
+            res.status(500).send(err);
         }
     });
 
@@ -31,7 +32,7 @@ module.exports = () => {
             const savedUser = await UserDao.addNew({username, firstName, lastName, secret});
             res.status(200).json(savedUser);
         } catch (err) {
-            res.status(500).json(err);
+            res.status(500).send(err);
         }
     });
 
