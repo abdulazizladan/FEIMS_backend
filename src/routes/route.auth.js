@@ -8,11 +8,11 @@ module.exports = () => {
     const api = express.Router();
 
     api.post('/login', async (req, res) => {
-        const { username, password } = req.body;
+        const { email, password } = req.body;
         try {
-            const user = await UserDao.getOneByUsername(username);
+            const user = await UserDao.getOneByEmail(email);
             if (user && await validatePassword(password, user.secret)) {
-                let token = await generateToken(user._id, username);
+                let token = await generateToken(user._id, email);
                 let {secret, ...data} = user;
 
                 const payload = { user: data, token: token };
@@ -26,10 +26,10 @@ module.exports = () => {
     });
 
     api.post('/register', async (req, res) => {
-        const {username, password, firstName, lastName} = req.body;
+        const {email, password, firstName, lastName} = req.body;
         try {
             secret = await generateSecret(password);
-            const savedUser = await UserDao.addNew({username, firstName, lastName, secret});
+            const savedUser = await UserDao.addNew({email, firstName, lastName, secret});
             res.status(200).json(savedUser);
         } catch (err) {
             res.status(500).send(err);

@@ -28,9 +28,9 @@ class UserDao {
         });
     }
 
-    getOneByUsername(username) {
+    getOneByEmail(email) {
         return new Promise((resolve, reject) => {
-            UserModel.findOne({ username }, (err, singleUser) => {
+            UserModel.findOne({ email }, (err, singleUser) => {
                 if (err) {
                     reject(err);
                 }
